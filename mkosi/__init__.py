@@ -2407,6 +2407,9 @@ def install_centos_variant(state: MkosiState) -> None:
         if epel_release >= 9:
             add_packages(state.config, packages, "systemd-boot", conditional="systemd")
 
+    # YCRC - Install these before the requested packages
+    install_packages_dnf(state, {"basesystem", "coreutils", "openssl-libs"})
+
     install_packages_dnf(state, packages)
 
     # Centos Stream 8 and below can't write to the sqlite db backend used by
