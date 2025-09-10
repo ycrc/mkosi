@@ -37,6 +37,7 @@ class Distribution(StrEnum):
     mageia = enum.auto()
     centos = enum.auto()
     rhel = enum.auto()
+    yalecrc = enum.auto()
     rhel_ubi = enum.auto()
     openmandriva = enum.auto()
     rocky = enum.auto()
@@ -50,6 +51,7 @@ class Distribution(StrEnum):
             Distribution.alma,
             Distribution.rocky,
             Distribution.rhel,
+            Distribution.yalecrc,
             Distribution.rhel_ubi,
         )
 
@@ -64,6 +66,7 @@ class Distribution(StrEnum):
             Distribution.mageia,
             Distribution.centos,
             Distribution.rhel,
+            Distribution.yalecrc,
             Distribution.rhel_ubi,
             Distribution.openmandriva,
             Distribution.rocky,
